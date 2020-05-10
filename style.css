@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+.logo {
+  font-size: 4rem;
+  font-family: "Monoton", cursive;
+}
+nav {
+  padding: 2rem 5rem;
+  background-color: rgb(130, 172, 33);
+}
+.nav-links {
+  float: right;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+.nav-links li {
+  display: inline-block;
+  margin: 0 3rem;
+}
+li a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  line-height: 4;
+  color: rgb(22, 22, 22);
+  transition: all 0.03s ease;
+}
+li a:hover {
+  text-decoration: underline;
+}
+.nav-btn {
+  float: right;
+  margin-top: 2.5rem;
+  display: none;
+}
+.bar1,
+.bar2,
+.bar3 {
+  height: 0.2rem;
+  width: 2rem;
+  background-color: rgb(22, 22, 22);
+  margin: 0.2rem;
+  transition: all 0.3s ease;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(-4px, 4px);
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  transform: rotate(45deg) translate(-2px, -2px);
+}
+@media (max-width: 760px) {
+  .nav-links li {
+    margin: 0 1.5rem;
+  }
+}
+@media (max-width: 630px) {
+  body {
+    overflow: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    top: 8rem;
+    right: 0;
+    width: 100%;
+    transform: translateX(100%);
+    background-color: rgb(130, 172, 33);
+  }
+  .nav-links li {
+    display: block;
+    margin: 0;
+  }
+  li a {
+    text-align: center;
+    display: block;
+    padding: 5rem 0;
+  }
+  li a:hover {
+    background-color: rgb(160, 187, 96);
+    text-decoration: none;
+  }
+  .nav-links-active {
+    transform: translateX(0);
+  }
+  .nav-btn {
+    display: block;
+  }
+}
